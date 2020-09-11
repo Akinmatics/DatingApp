@@ -14,6 +14,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 // import { FileUploadModule } from 'ng2-file-upload';
 import { FileUploadModule } from '@swimlane/ng2-file-upload';
+// import {TimeAgoPipe} from 'time-ago-pipe';
+import { TimeagoModule } from 'ngx-timeago';
 
 
 import { AppComponent } from './app.component';
@@ -60,10 +62,12 @@ export class CustomHammerConfig extends HammerGestureConfig {
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      PhotoEditorComponent
+      PhotoEditorComponent,
+      // TimeAgoPipe
    ],
    imports: [
       BrowserModule,
+      TimeagoModule.forRoot(),
       BrowserAnimationsModule,
       HttpClientModule,
       FormsModule,
